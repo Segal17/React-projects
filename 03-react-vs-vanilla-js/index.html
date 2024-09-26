@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>react hello world</title>
+  </head>
+  <body>
+    <div id="react-app"></div>
+    <div id="vanilla-app"></div>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script>
+      // созадил компонент с свойствами null
+      const reactHeading = React.createElement("h1", null, "Hello react");
+
+      const container = document.getElementById("react-app");
+      //для  добавления компонента реакта в контейнер
+      const root = ReactDOM.createRoot(container);
+      // вызываем метод рендер объекта рут и ему можем передать компонент реакт
+      root.render(reactHeading);
+
+      console.log(reactHeading);
+    </script>
+    <script>
+      const heading = document.createElement("h1");
+      heading.textContent = "Hello from vanilla js";
+
+      document.getElementById("vanilla-app").appendChild(heading);
+      console.log(heading);
+    </script>
+  </body>
+</html>
