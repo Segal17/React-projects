@@ -18,6 +18,7 @@ function App() {
   };
 
   const buttonStyle = { backgroundColor: "lightgreen" };
+
   return (
     <div className="App">
       <Counter count={count} />
